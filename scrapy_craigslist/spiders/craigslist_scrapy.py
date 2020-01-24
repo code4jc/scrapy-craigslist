@@ -21,8 +21,8 @@ class MySpider(CrawlSpider):
 
     """
     name = 'craigslist'
-    allowed_domains = ['sfbay.craigslist.org']
-    start_urls = ['https://sfbay.craigslist.org/search/apa?']
+    allowed_domains = ['njy.craigslist.org']
+    start_urls = ['https://njy.craigslist.org/search/apa?']
 
     # rules = (
     #     # Scrape all pages of results, not just the first page.
@@ -37,7 +37,7 @@ class MySpider(CrawlSpider):
 
     rules = (
         Rule(LxmlLinkExtractor(
-            allow=(r'sfbay.craigslist.org/search/apa.*'),
+            allow=(r'njy.craigslist.org/search/apa.*'),
             # allow=(r'.*/search/apa\?s\=\d+.*'),
             deny = (r'.*format\=rss.*')
         ),
